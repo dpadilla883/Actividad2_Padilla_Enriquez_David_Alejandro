@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    <title>Aplicación con Web Components</title>
+    <script type="module">
+        import './components/app-header.js';
+        import './components/app-footer.js';
+        import './components/app-main.js';
+        import './components/app-menu.js';
+        import './components/social-profile.js';
+        import './components/custom-table.js';
+        import './components/app-gallery.js';
+    </script>
+</head>
+<body>
+    <app-header></app-header>
+    <app-menu></app-menu>
+    <app-main>
+        <social-profile slot="page"></social-profile>
+        <custom-table slot="page" style="display:none;"></custom-table>
+        <app-gallery slot="page" style="display:none;"></app-gallery>
+    </app-main>
+    <app-footer></app-footer>
+    <script src="components/app-header.js"></script>
+    <script src="components/app-footer.js"></script>
+    <script src="components/app-main.js"></script>
+    <script src="components/app-menu.js"></script>
+    <script src="components/social-profile.js"></script>
+    <script src="components/custom-table.js"></script>
+    <script src="components/app-gallery.js"></script>
+</body>
+</html>
